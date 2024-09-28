@@ -1,0 +1,29 @@
+#model {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  
+  background: #333d;
+  color: #ddd;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.close {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  clear: #ddd;
+  right: 30px;
+  top: 20px;
+  cursor: pointer;
+}
