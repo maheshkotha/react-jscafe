@@ -27,5 +27,6 @@
   ========== Initial Setup Done ============
 
 
+* React Auto import, configure the .bablerc, and update webpack rules for js|jsx files
 
   
