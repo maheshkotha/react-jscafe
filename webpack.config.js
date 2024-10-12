@@ -1,7 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
-
 module.exports = {
   output: {
     path: path.join(__dirname, '/dist'),
@@ -29,7 +28,22 @@ module.exports = {
       },
       {
         test: /\.(sa|sc|c)ss$/,
-        use: ["style-loader", "css-loader", "sass-loader"]
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "postcss-loader",  // Add postcss-loader here
+            options: {
+              postcssOptions: {
+                plugins: [
+                  require("tailwindcss"),
+                  require("autoprefixer"),
+                ],
+              },
+            },
+          },
+          "sass-loader"
+        ]
       },
       {
         test: /\.(png|woff|woff2|eot|ttf|svg)$/,
